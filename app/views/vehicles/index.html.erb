@@ -1,13 +1,17 @@
-<h1>Customer Analysis</h1>
+<div class='p-12 max-w-5xl'>
+  <h1 class="pb-12 text-3xl font-bold underline">Customer Analysis</h1>
+  <div class='flex justify-between pb-12'>
+    <%= form_with url: vehicles_path, method: :create, class:'flex flex-col m-4' do |form| %>
+      <%= form.file_field :vehicle_data, class: 'py-4' %>
+      <%= form.submit "Add Data", class: 'p-2 text-xl font-bold underline' %>
+    <% end %>
 
-<%= form_with url: vehicles_path, method: :create do |form| %>
-  <%= form.label :vehicle_data, 'Vehicle Data File:' %>
-  <%= form.file_field :vehicle_data %>
-  <%= form.submit "Upload" %>
-<% end %>
+    <%= form_with url: vehicles_path, method: :delete do |form| %>
+      <%= form.submit "Clear Data", class: 'text-xl font-bold underline border background-white' %>
+    <% end %>
+  </div>
 
-<%= form_with url: vehicles_path, method: :delete do |form| %>
-  <%= form.submit "Clear Data" %>
-<% end %>
-
-<%= render 'table' %>
+  <div>
+    <%= render 'table' %>
+  </div>
+<div>
