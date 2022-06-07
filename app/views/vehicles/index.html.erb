@@ -1,0 +1,13 @@
+<h1>Customer Analysis</h1>
+
+<%= form_with url: vehicles_path, method: :create do |form| %>
+  <%= form.label :vehicle_data, 'Vehicle Data File:' %>
+  <%= form.file_field :vehicle_data %>
+  <%= form.submit "Upload" %>
+<% end %>
+
+<%= form_with url: vehicles_path, method: :delete do |form| %>
+  <%= form.submit "Clear Data" %>
+<% end %>
+
+<%= render 'table' %>
