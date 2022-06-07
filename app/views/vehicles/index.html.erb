@@ -1,14 +1,21 @@
-<div class='p-12 max-w-5xl'>
-  <h1 class="pb-12 text-3xl font-bold underline">Customer Analysis</h1>
-  <div class='flex justify-between pb-12'>
-    <%= form_with url: vehicles_path, method: :create, class:'flex flex-col m-4' do |form| %>
-      <%= form.file_field :vehicle_data, class: 'py-4' %>
-      <%= form.submit "Add Data", class: 'p-2 text-xl font-bold underline' %>
+<div class='p-12 h-screen max-w-5xl bg-gray-100 m-auto'>
+  <div class='flex justify-between'>
+    <h1 class="text-5xl font-bold underline">Customer Dashboard</h1>
+    <div class='flex flex-col justify-end font-bold'>
+      <p>by Clark Bristol</p>
+    </div>
+  </div>
+  <div class='flex justify-between py-12'>
+    <%= form_with url: vehicles_path, method: :create, class:'flex p-4 flex-col grow w-1/2 m-4 border-2 border-gray-500 rounded-xl' do |form| %>
+      <%= form.file_field :vehicle_data, class: 'pb-4' %>
+      <%= form.submit "Load data (duplicates ignored)", class: 'p-2 text-xl font-bold bg-gray-300 underline rounded-xl border-black cursor-pointer' %>
     <% end %>
 
-    <%= form_with url: vehicles_path, method: :delete do |form| %>
-      <%= form.submit "Clear Data", class: 'text-xl font-bold underline border background-white' %>
-    <% end %>
+    <div class='flex flex-col justify-end grow w-1/2 m-4 p-4'>
+      <%= form_with url: vehicles_path, method: :delete do |form| %>
+        <%= form.submit "Clear data", class: 'p-2 text-xl font-bold bg-gray-300 underline w-full rounded-xl cursor-pointer' %>
+      <% end %>
+    </div>
   </div>
 
   <div>

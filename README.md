@@ -52,6 +52,7 @@ Enjoy!
 * How to run the test suite
 
 ## Things to think about/upcoming features:
+* Normalize the vehicle length field and use a numerica data type
 * Improve styles
 * Test coverage
 * SQLite sorts upper case letters before lower case letters, which is not ideal for our user-facing sort feature

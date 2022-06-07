@@ -1,11 +1,11 @@
 <%= turbo_frame_tag "players" do %>
   <div id='results'>
-    <table>
+    <table class='min-w-full'>
       <thead>
-        <tr>
-          <th>Name <%= link_to "(Sort)", vehicles_path(sort_on: :name, sort_direction: @link_sort_direction) %></th>
+        <tr class='text-left'>
+          <th><%= link_to "Name ↓↑", vehicles_path(sort_on: :name, sort_direction: @link_sort_direction), class: 'text-blue-500' %></th>
           <th>Email</th>
-          <th>Vehicle Type <%= link_to "(Sort)", vehicles_path(sort_on: :vehicle_type, sort_direction: @link_sort_direction) %></th>
+          <th><%= link_to "Vehicle Type ↓↑", vehicles_path(sort_on: :vehicle_type, sort_direction: @link_sort_direction), class: 'text-blue-500' %></th>
           <th>Vehicle Name</th>
           <th>Vehicle Length</th>
         </tr>
