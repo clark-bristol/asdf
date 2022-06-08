@@ -13,9 +13,9 @@
 ## **Using the App**
 
 ### Upload your data
-Upload your CSV or pipe-delimited files containing your vehicle data. Currently
-your data files must contain the following columns in the following order and have
-**no header row**:
+Upload your CSV or pipe-delimited files containing your vehicle data or use the sample data
+in the `/data` directory in this repo. Currently your data files must contain the following
+columns in the following order and have **no header row**:
 
 ```
 first_name,last_name,email,vehicle_type,vehicle_name,length
