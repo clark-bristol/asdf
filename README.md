@@ -1,5 +1,7 @@
 # **Welcome to the Outdoorsy "Customer Data" app!**
 
+![DEMO](asdf.gif)
+
 ## **Running the App**
 
 * Install and use the version of Ruby specified in the `.ruby-version` file (`ruby-3.0.1`).
