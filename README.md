@@ -6,6 +6,7 @@
 * Run `bundle install` to install dependencies
 * Run `bin/rails db:create` to create your local SQLite database. If you are on an unusual system you might have
   to install SQLite first
+* Run `bin/rails db:migrate`
 * Run `bin/rails server` to start your local server
 * Navigate to http://localhost:3000/ and start uploading and analyzing your business data!
 * If you want some sample data to use, there are two files in the `data` directory here.
