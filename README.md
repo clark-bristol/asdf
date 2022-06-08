@@ -3,9 +3,8 @@
 ## **Running the App**
 
 * Install and use the version of Ruby specified in the `.ruby-version` file (`ruby-3.0.1`).
-* Run `bundle install` to install dependencies
-* Run `bin/rails db:create` to create your local SQLite database. If you are on an unusual system you might have
-  to install SQLite first
+* Run `bundle install` to install dependencies. (You might have to install `bundler` first)
+* Run `bin/rails db:create` to create your local SQLite database. (You might have to install SQLite first)
 * Run `bin/rails db:migrate`
 * Run `bin/rails server` to start your local server
 * Navigate to http://localhost:3000/ and start uploading and analyzing your business data!
@@ -59,7 +58,7 @@ Enjoy!
   styles to the browser ourselves and only send the ones we actually use on the page
 
 ## **Questions for Product/Users**
-* As-built the app automatically de-duplicates data based on all fields. Let's discuss!
+* As-built the app automatically de-duplicates data based on all fields (unless a field is NULL). Let's discuss!
 * How do you use the 'Vehicle Length' data? Is the messiness a problem? Would you like it to be more consistent
   so it's easier to read, or numerical so you can do mathmatical operations with it?
 * Do we want all of our users to be working with the same data, or do we want to segment it by user so when
