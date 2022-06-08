@@ -1,13 +1,14 @@
-# **Welcome to the outdoorsy "Customer Data" app!**
+# **Welcome to the Outdoorsy "Customer Data" app!**
 
 ## **Running the App**
 
-* Install and use the version of Ruby specified in the `.ruby-version` file
+* Install and use the version of Ruby specified in the `.ruby-version` file (`ruby-3.0.1`).
 * Run `bundle install` to install dependencies
 * Run `bin/rails db:create` to create your local SQLite database. If you are on an unusual system you might have
   to install SQLite first
 * Run `bin/rails server` to start your local server
 * Navigate to http://localhost:3000/ and start uploading and analyzing your business data!
+* If you want some sample data to use, there are two files in the `data` directory here.
 
 ## **Using the App**
 
