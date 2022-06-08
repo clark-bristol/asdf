@@ -1,11 +1,7 @@
 class VehiclesController < ApplicationController
   def index
-    sort_dir = params[:sort_direction] || 'asc'
-    sort_on = params[:sort_on] || 'name'
+    @vehicles = Vehicle.all.order(db_sort_params)
 
-    sort_params = sort_on == 'vehicle_type' ? { vehicle_type: sort_dir } : { last_name: sort_dir, first_name: sort_dir }
-
-    @vehicles = Vehicle.all.order(sort_params)
     @link_sort_direction = sort_dir == 'asc' ? 'desc' : 'asc'
   end
 
@@ -32,6 +28,20 @@ class VehiclesController < ApplicationController
   end
 
   private
+
+  def db_sort_params
+     return { vehicle_type: sort_dir } if sort_on == 'vehicle_type'
+
+     { last_name: sort_dir, first_name: sort_dir }
+  end
+
+  def sort_dir
+    params[:sort_direction] || 'asc'
+  end
+
+  def sort_on
+    params[:sort_on] || 'name'
+  end
 
   def file_param
     params.require(:vehicle_data)
